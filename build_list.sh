@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ./ehp.py >temp
-echo '<HTML>'
-echo '<HEAD><TITLE>eHP list</TITLE></HEAD>'
+#echo '<HTML>'
+#echo '<HEAD><TITLE>eHP list</TITLE></HEAD>'
 echo '<BODY>'
 cat README.head
 echo '<P>'
