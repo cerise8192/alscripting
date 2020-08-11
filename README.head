@@ -1,0 +1,24 @@
+- build-al.py
+Reads the wiki at https://azurlane.koumakan.jp/List_of_Ships_by_Stats and
+builds al.json
+
+- al.json
+A cached version so you don't hit koumakan a ton.
+
+- ehp.py
+Reads al.json and computes effective HP for all ships by the following formula:
+
+HP/(1-DR)/((0.1+(eHIT/(eHIT+(EVA*(1+EVA_stat_buff)+2)))+((eLUCK-LUCK)/1000)-(EVA_rate_buff)))/armor_mod
+
+armor_mod is .25 for Heavy, .55 for Medium, 1 for Light
+EVA_rate_buff and EVA_stat_buff are assumed to be 0
+eHIT is the enemy's chance to hit.  Set to 100.
+eLUCK is the enemy's luck.  Set to 50.
+DR is the effect of current damage reduction.  Set to 0
+LUCK and HP are your ship's luck & hp.
+
+- build_list.sh
+The script that I use to generate ehp.html
+
+- ehp.html
+The actual listing
