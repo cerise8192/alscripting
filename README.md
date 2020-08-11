@@ -1,5 +1,3 @@
-<HTML>
-<HEAD><TITLE>eHP list</TITLE></HEAD>
 <BODY>
 - build-al.py
 Reads the wiki at https://azurlane.koumakan.jp/List_of_Ships_by_Stats and
